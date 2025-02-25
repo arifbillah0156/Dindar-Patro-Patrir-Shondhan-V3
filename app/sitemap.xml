@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.dindarpatropatri.xyz/</loc>
+        <lastmod>2024-02-17</lastmod>
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.dindarpatropatri.xyz/all_biodata</loc>
+        <lastmod>2024-02-17</lastmod>
+        <priority>0.8</priority>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.dindarpatropatri.xyz/create_new_biodata</loc>
+        <lastmod>2024-02-17</lastmod>
+        <priority>0.7</priority>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.dindarpatropatri.xyz/guide</loc>
+        <lastmod>2024-02-17</lastmod>
+        <priority>0.6</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.dindarpatropatri.xyz/contact</loc>
+        <lastmod>2024-02-17</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+</urlset>
