@@ -38,7 +38,7 @@ const DataComponent = () => {
 
           setTimeout(() => {
             setDataLen(convertToBanglaDigits(newArray.length.toString()));
-            setData(newArray);
+            setData(newArray.reverse());
           }, 300);
         } else {
           alert("Somthing wrong! No data found!!");

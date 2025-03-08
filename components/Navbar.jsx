@@ -38,31 +38,31 @@ export default function Navbar() {
               <div className="hidden md:flex">
                 <Link
                   href="/"
-                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full  focus:underline underline underline-offset-4 decoration-wavy"
+                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full  focus:underline underline underline-offset-4 "
                 >
                   হোম
                 </Link>
                 <Link
                   href="/all_biodata"
-                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full focus:underline underline underline-offset-4 decoration-wavy"
+                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full focus:underline underline underline-offset-4 "
                 >
                   সমস্ত বায়োডাটা
                 </Link>
                 <Link
                   href="/create_new_biodata"
-                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full focus:underline underline underline-offset-4 decoration-wavy"
+                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full focus:underline underline underline-offset-4 "
                 >
                   + বায়োডাটা
                 </Link>
                 <Link
                   href="/guide"
-                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full focus:underline underline underline-offset-4 decoration-wavy"
+                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full focus:underline underline underline-offset-4 "
                 >
                   নির্দেশনা
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full focus:underline underline underline-offset-4 decoration-wavy"
+                  className="text-xl hover:underline mx-2 px-3 py-2  rounded-full focus:underline underline underline-offset-4 "
                 >
                   যোগাযোগ
                 </Link>

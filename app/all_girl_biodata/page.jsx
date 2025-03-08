@@ -24,7 +24,7 @@ const DataComponent = () => {
           });
 
           setTimeout(() => {
-            setData(newArray);
+            setData(newArray.reverse());
           }, 300);
         } else {
           alert("Somthing wrong! No data found!!");

@@ -27,10 +27,10 @@ export default function HomeSearchForm() {
   };
 
   return (
-    <div className="mt-14 ">
+    <div className="mt-14">
       <form
         onSubmit={handleSubmit}
-        className="max-w-md mx-auto p-6 bg-cover bg-center  border shadow-md rounded-lg space-y-4"
+        className="max-w-md mx-auto p-6 bg-cover bg-center border shadow-md rounded-lg space-y-4 border-t-8 border-pink-600"
         style={{
           backgroundImage: `url(/Images/HomeTextBG.jpg)`,
         }}
