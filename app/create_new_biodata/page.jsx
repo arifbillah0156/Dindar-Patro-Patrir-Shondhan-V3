@@ -19,7 +19,9 @@ export default function Home() {
 
   const [formData, setFormData] = useState({
     id: `#${Date.now() + Math.floor(Math.random() * 30)}`,
-    date: `${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
+    date: `${new Date().getDate()}/${
+      new Date().getMonth() + 1
+    }/${new Date().getFullYear()}`,
     boyOrGirl: "পাত্র",
     name: "",
     mobile: "",
