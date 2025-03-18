@@ -257,12 +257,12 @@ export default function EditButton({ dataObj, dataName }) {
         <div>
           <FormLabel text={"আপনার উচ্চতা"} require="true" />
           <input
-            type="number"
+            type="text"
             name="height"
             value={formData.height}
             onChange={handleChange}
-            maxLength={5}
-            placeholder="এভাবে লিখুন = 5.05"
+            maxLength={50}
+            placeholder="আপনার উচ্চতা লিখুন..."
             className="formInput"
             required
           />

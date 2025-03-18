@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="">
           <div className="text-center">
-            <h1 className="mr-2 text-xl font-mono">
+            <h1 className="mr-2 text-lg font-mono">
               The website was created by-
             </h1>
             <div className="mt-2">
@@ -16,7 +16,7 @@ export default function Footer() {
                 passHref
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 font-bold px-4 py-2 text-lg rounded-full underline underline-offset-4 decoration-gray-200 text-gray-300 border-x-gray-500"
+                className="border-2 font-bold px-3 py-1 text-md rounded-full underline underline-offset-2 decoration-gray-200 text-gray-300 border-x-gray-500"
               >
                 Arif Billah
               </Link>
