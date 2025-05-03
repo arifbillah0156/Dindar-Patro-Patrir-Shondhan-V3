@@ -54,16 +54,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="bn" dir="ltr">
       <head>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-9013512537152543"
+        ></meta>
         <meta httpEquiv="Content-Language" content="bn" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9013512537152543"
           crossorigin="anonymous"
         ></script>
-
+        <script
+          async
+          custom-element="amp-ad"
+          src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+        ></script>
         {/*  */}
         {/* Google Analytics (Replace 'G-1KMMWWDHLH' with your actual Measurement ID) */}
-
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-1KMMWWDHLH"
@@ -83,7 +90,31 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-gray-50">
         <Navbar />
+        <amp-ad
+          width="100vw"
+          height="320"
+          type="adsense"
+          data-ad-client="ca-pub-9013512537152543"
+          data-ad-slot="9364345934"
+          data-auto-format="rspv"
+          data-full-width=""
+        >
+          <div overflow=""></div>
+        </amp-ad>
+        {/*  */}
         {children}
+        {/*  */}
+        <amp-ad
+          width="100vw"
+          height="320"
+          type="adsense"
+          data-ad-client="ca-pub-9013512537152543"
+          data-ad-slot="5006298521"
+          data-auto-format="rspv"
+          data-full-width=""
+        >
+          <div overflow=""></div>
+        </amp-ad>
         <Footer />
       </body>
     </html>
