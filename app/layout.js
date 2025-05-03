@@ -55,6 +55,11 @@ export default function RootLayout({ children }) {
     <html lang="bn" dir="ltr">
       <head>
         <meta httpEquiv="Content-Language" content="bn" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9013512537152543"
+          crossorigin="anonymous"
+        ></script>
 
         {/*  */}
         {/* Google Analytics (Replace 'G-1KMMWWDHLH' with your actual Measurement ID) */}
