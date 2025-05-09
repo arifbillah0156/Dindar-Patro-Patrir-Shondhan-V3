@@ -1,6 +1,7 @@
 "use client";
 import AddPhotoGuide from "./AddPhotoGuide";
 import GuideSection from "./guideSection";
+import MarriageInfo from "./MarriageInfo";
 export default function Guide() {
   const steps = [
     {
@@ -72,7 +73,8 @@ export default function Guide() {
           <h2 className="text-xl font-semibold text-gray-800 mb-4 underline decoration-double underline-offset-4">
             ৪. পাত্র/পাত্রীর বায়োডাটায় আগ্রহী হলে কিভাবে যোগাযোগ করবো?
           </h2>
-          <ul className="list-disc list-inside text-gray-800 space-y-2 text-lg">
+          <MarriageInfo />
+          {/* <ul className="list-disc list-inside text-gray-800 space-y-2 text-lg">
             <li>এক্ষেত্রে আপনাকে নির্দিষ্ট ফি প্রদান করতে হবে।</li>
             <li>
               প্রথমে আমাদের বিকাশ/নগদ পার্সোনাল নাম্বারে{" "}
@@ -119,7 +121,7 @@ export default function Guide() {
               হবে ইনশাহ্আল্লাহ।
             </li>
             <li>বিবাহকে সহজ করাই আমাদের মূল লক্ষ্য।</li>
-          </ul>
+          </ul> */}
         </section>{" "}
         {/*  */}
         {/*  */}
@@ -179,18 +181,18 @@ export default function Guide() {
           </div>
         </div>
         <br />
-        <GuideSection
+        {/* <GuideSection
           header="৬. কিভাবে ক্রয়কৃত বায়োডাটার টাকা ফেরত পাবো?"
           text="কোনো বায়োডাটার যোগাযোগ তথ্য নিয়ে যোগাযোগ করতে ব্যর্থ হলে আপনি টাকা ফেরত পাবেন অথবা আপনি চাইলে অন্য একটি বায়োডাটার যোগাযোগ তথ্য নিতে পারবেন। তবে বিপরীত পক্ষ যদি তাদের ব্যক্তিগত অপছন্দের কারণে আপনার প্রস্তাব প্রত্যাখ্যান করে তাহলে টাকা ফেরত পাবেন না।"
-        />{" "}
+        />{" "} */}
         <br />
         <GuideSection
-          header="৭. আমার জমা দেওয়া বায়োডাটা এডিট করবেন কিভাবে?"
+          header="6. আমার জমা দেওয়া বায়োডাটা এডিট করবেন কিভাবে?"
           text="আপনার জমা হওয়া বায়োডাটা এডিট করতে আমাদের ফেসবুক পেইজে মেসেজ দিয়ে বলুন।"
         />{" "}
         <br />
         <GuideSection
-          header="৮. আমার জমা দেওয়া বায়োডাটা ডিলিট করবো কিভাবে?"
+          header="7. আমার জমা দেওয়া বায়োডাটা ডিলিট করবো কিভাবে?"
           text="আপনার জমা হওয়া বায়োডাটা ডিলিট করাতে আমাদের ফেসবুক পেইজে মেসেজ দিয়ে বলুন।"
         />
       </main>
