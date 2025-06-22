@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="">
           <div className="text-center">
             <h1 className="mr-2 text-lg font-mono">
-              The website was created by-
+              The website was developed by-
             </h1>
             <div className="mt-2">
               <Link

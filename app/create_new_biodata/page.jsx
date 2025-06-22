@@ -247,10 +247,13 @@ export default function Home() {
               </div>
               <hr />
               {/* জন্ম নিবন্ধন নাম্বার */}
-              <div>
+              {/* <div>
                 <FormLabel text={"আপনার জন্ম নিবন্ধন নাম্বার"} />
                 <p className="text-pink-500 pl-2 text-justify">
                   ~ এটি ওয়েবসাইটে প্রদর্শিত হবেনা।
+                </p>
+                <p className="text-pink-500 pl-2 text-justify">
+                  ~ চাইলে না
                 </p>
                 <input
                   type="number"
@@ -262,7 +265,7 @@ export default function Home() {
                   className="formInput"
                 />
               </div>
-              <hr />
+              <hr /> */}
               {/* আপনার উচ্চতা */}
               <div>
                 <FormLabel text={"আপনার উচ্চতা"} require="true" />
