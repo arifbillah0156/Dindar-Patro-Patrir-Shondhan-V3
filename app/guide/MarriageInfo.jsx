@@ -1,6 +1,6 @@
 export default function MarriageInfo() {
   return (
-    <div className="max-w-4xl  p-6 bg-white rounded-2xl shadow-lg border border-gray-200 space-y-6">
+    <div className="max-w-4xl p-3 py-6 lg:p-6 bg-white rounded-2xl shadow-lg border border-gray-200 space-y-4">
       <h1 className="text-2xl font-bold text-center text-green-700">
         দ্বীনদার পাত্র-পাত্রীর সন্ধান
       </h1>
@@ -16,7 +16,7 @@ export default function MarriageInfo() {
         <strong>কানেকশন ফি</strong> পরিশোধ করতে হয়।
       </p>
 
-      <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+      <div className="bg-green-50 border border-green-200 rounded-lg p-2 lg:p-4">
         <h2 className="text-lg font-semibold text-green-800 mb-2">
           প্রস্তাব পাঠানোর নিয়মাবলি:
         </h2>
@@ -41,7 +41,7 @@ export default function MarriageInfo() {
             <ul className="mt-2 ml-5 list-disc">
               <li>
                 <strong>🥇 গোল্ড প্যাকেজ: (জনপ্রিয়)</strong> <br />
-                মেয়াদ: ৩ মাস
+                মেয়াদ: ৩ মাস।
                 <br />
                 সুবিধা: আপনি ১০টি বায়োডাটায় প্রস্তাব পাঠাতে পারবেন এবং আপনার
                 বায়োডাটায় বিনামূল্যে যোগাযোগ করা যাবে।
@@ -51,7 +51,7 @@ export default function MarriageInfo() {
               </li>
               <li className="mt-2">
                 <strong>🥈 ডায়মন্ড প্যাকেজ:</strong> <br />
-                মেয়াদ: ৬ মাস
+                মেয়াদ: ৬ মাস।
                 <br />
                 সুবিধা: আপনি ২০টি বায়োডাটায় প্রস্তাব পাঠাতে পারবেন এবং আপনার
                 বায়োডাটায় বিনামূল্যে যোগাযোগ করা যাবে।
@@ -77,7 +77,7 @@ export default function MarriageInfo() {
 
       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-gray-800">
         <h3 className="font-semibold text-yellow-800">বিঃদ্রঃ</h3>
-        <ul className="list-disc ml-5 mt-2 space-y-1">
+        <ul className="list-disc ml-5 mt-2 space-y-1 text-justify">
           <li>
             যদি কোনো কারণে পাত্র/পাত্রীর সাথে যোগাযোগ সম্ভব না হয়, অথবা তার বিয়ে
             ইতোমধ্যে হয়ে গিয়ে থাকে—তাহলে

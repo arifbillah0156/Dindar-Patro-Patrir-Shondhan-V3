@@ -50,7 +50,7 @@ export default function Guide() {
     >
       <header className="py-4">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold underline decoration-double text-gray-900  bg-white w-max px-6  py-4 rounded-lg decoration-pink-400 underline-offset-4 ">
+          <h1 className="text-2xl font-bold underline decoration-double text-purple-700  bg-white w-max px-6  py-4 rounded-lg decoration-blue-700 underline-offset-4 ">
             ~সাধারণ নির্দেশিকা~
           </h1>
         </div>
