@@ -12,7 +12,7 @@ export default function Navbar() {
     <div>
       <div className="w-full bg-gray-50 text-gray-800">
         <nav
-          className="bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 text-white  py-4 rounded-b-3xl h-max w-[100%] bg-[url('/Images/NavBG.jpg')]  lg:bg-[url('/Images/NavBG2.jpg')] bg-cover bg-center"
+          className="bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 text-white  py-4 rounded-b-3xl h-max w-[100%] bg-[url('/Images/NavBG.jpg')] md:bg-[url('/Images/NavBG2.jpg')] bg-cover bg-center"
           // style={{
           //   backgroundImage: `url(/Images/NavBG2.jpg)`,
           //
