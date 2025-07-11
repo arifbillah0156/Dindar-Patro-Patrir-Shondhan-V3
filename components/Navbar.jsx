@@ -12,11 +12,10 @@ export default function Navbar() {
     <div>
       <div className="w-full bg-gray-50 text-gray-800">
         <nav
-          className="bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 text-white  py-4 rounded-b-3xl h-max w-[100%] bg-[url('/Images/NavBG.jpg')] md:bg-[url('/Images/NavBG2.jpg')] bg-cover bg-center"
-          // style={{
-          //   backgroundImage: `url(/Images/NavBG2.jpg)`,
-          //
-          // }}
+          className="bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 text-white  py-4 rounded-b-3xl h-max w-[100%] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(/Images/NavBG2.jpg)`,
+          }}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
