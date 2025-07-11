@@ -67,11 +67,9 @@ export default function Guide() {
           text="দ্বীনদার পাত্র-পাত্রীর সন্ধান ওয়েবসাইটে সম্পূর্ণ বিনামূল্যে বায়োডাটা জমা দেওয়ার সুযোগ রয়েছে।"
         />
         <br />
-        <AddPhotoGuide />
-        <br />
         <section className="bg-white shadow-md rounded-lg p-6">
           <h2 className="text-xl font-semibold text-gray-800 mb-4 underline decoration-double underline-offset-4">
-            ৪. পাত্র/পাত্রীর বায়োডাটায় আগ্রহী হলে কিভাবে যোগাযোগ করবো?
+            ৩. পাত্র/পাত্রীর বায়োডাটায় আগ্রহী হলে কিভাবে যোগাযোগ করবো?
           </h2>
           <MarriageInfo />
           {/* <ul className="list-disc list-inside text-gray-800 space-y-2 text-lg">
@@ -125,6 +123,8 @@ export default function Guide() {
         </section>{" "}
         {/*  */}
         {/*  */}
+        <br />
+        <AddPhotoGuide />
         <br />
         <div className="bg-white shadow-md rounded-lg p-6">
           <h1 className="text-xl font-semibold text-gray-800 mb-2 underline decoration-double underline-offset-4">

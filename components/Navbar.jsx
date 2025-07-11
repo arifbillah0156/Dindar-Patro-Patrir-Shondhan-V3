@@ -12,10 +12,10 @@ export default function Navbar() {
     <div>
       <div className="w-full bg-gray-50 text-gray-800">
         <nav
-          className="bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 text-white  py-4 rounded-b-3xl h-max w-[100%] bg-cover bg-center"
-          style={{
-            backgroundImage: `url(/Images/NavBG.jpg)`,
-          }}
+          className="bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 text-white  py-4 rounded-b-3xl h-max w-[100%] bg-[url('/Images/NavBG.jpg')] lg:bg-[url('/Images/NavBG2.jpg')] bg-cover bg-center"
+          // style={{
+          //   backgroundImage: `url(/Images/NavBG2.jpg)`,
+          // }}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
@@ -108,35 +108,35 @@ export default function Navbar() {
                   <Link
                     href="/"
                     onClick={() => setTimeout(() => setIsOpen(!isOpen), 200)}
-                    className="text-xl hover:underline mt-6 focus:underline"
+                    className="text-xl mt-6  underline underline-offset-4"
                   >
                     হোম
                   </Link>
                   <Link
                     href="/all_biodata"
                     onClick={() => setTimeout(() => setIsOpen(!isOpen), 200)}
-                    className="text-xl hover:underline focus:underline"
+                    className="text-xl   underline underline-offset-4"
                   >
                     সমস্ত বায়োডাটা
                   </Link>
                   <Link
                     href="/create_new_biodata"
                     onClick={() => setTimeout(() => setIsOpen(!isOpen), 200)}
-                    className="text-xl hover:underline focus:underline"
+                    className="text-xl  underline underline-offset-4"
                   >
                     + বায়োডাটা
                   </Link>
                   <Link
                     href="/guide"
                     onClick={() => setTimeout(() => setIsOpen(!isOpen), 200)}
-                    className="text-xl hover:underline focus:underline"
+                    className="text-xl   underline underline-offset-4"
                   >
                     নির্দেশনা
                   </Link>
                   <Link
                     href="/contact"
                     onClick={() => setTimeout(() => setIsOpen(!isOpen), 50)}
-                    className="text-xl hover:underline focus:underline"
+                    className="text-xl   underline underline-offset-4"
                   >
                     যোগাযোগ
                   </Link>
