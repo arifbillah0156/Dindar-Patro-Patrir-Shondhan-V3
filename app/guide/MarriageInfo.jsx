@@ -1,7 +1,7 @@
 export default function MarriageInfo() {
   return (
     <div className="max-w-4xl p-3 py-6 lg:p-6 bg-white rounded-2xl shadow-lg border border-gray-200 space-y-4">
-      <h1 className="text-2xl font-bold text-center text-green-700">
+      <h1 className="text-2xl font-bold text-center text-green-700  galada-regular">
         দ্বীনদার পাত্র-পাত্রীর সন্ধান
       </h1>
 
@@ -17,7 +17,7 @@ export default function MarriageInfo() {
       </p>
 
       <div className="bg-green-50 border border-green-200 rounded-lg p-2 lg:p-4">
-        <h2 className="text-lg font-semibold text-green-800 mb-2">
+        <h2 className="text-lg font-semibold text-green-800 mb-2  galada-regular">
           প্রস্তাব পাঠানোর নিয়মাবলি:
         </h2>
         <ol className="list-decimal list-inside text-gray-800 space-y-2">
@@ -89,7 +89,7 @@ export default function MarriageInfo() {
         </ul>
       </div>
 
-      <p className="text-center text-green-800 font-semibold">
+      <p className="text-center text-green-800 font-semibold  galada-regular">
         আপনার দ্বীনদার জীবনসঙ্গী খুঁজে পাওয়ার যাত্রায় আমরা আছি পাশে।
         <br />
         <span className="text-lg">

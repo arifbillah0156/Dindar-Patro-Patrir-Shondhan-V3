@@ -50,7 +50,7 @@ export default function Guide() {
     >
       <header className="py-4">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold underline decoration-double text-purple-700  bg-white w-max px-6  py-4 rounded-lg decoration-blue-700 underline-offset-4 ">
+          <h1 className="text-2xl font-bold underline decoration-double text-purple-700  bg-white w-max px-6  py-4 rounded-lg decoration-blue-700 underline-offset-4  galada-regular">
             ~সাধারণ নির্দেশিকা~
           </h1>
         </div>
@@ -68,7 +68,7 @@ export default function Guide() {
         />
         <br />
         <section className="bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 underline decoration-double underline-offset-4">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4 underline decoration-double underline-offset-4  galada-regular">
             ৩. পাত্র/পাত্রীর বায়োডাটায় আগ্রহী হলে কিভাবে যোগাযোগ করবো?
           </h2>
           <MarriageInfo />
@@ -127,7 +127,7 @@ export default function Guide() {
         <AddPhotoGuide />
         <br />
         <div className="bg-white shadow-md rounded-lg p-6">
-          <h1 className="text-xl font-semibold text-gray-800 mb-2 underline decoration-double underline-offset-4">
+          <h1 className="text-xl font-semibold text-gray-800 mb-2 underline decoration-double underline-offset-4  galada-regular">
             ৫. বিয়ের আগে সঠিকভাবে খোঁজ নেওয়ার গুরুত্ব ও পদ্ধতি
           </h1>
           <p className="text-gray-800 text-lg  indent-4">
@@ -175,7 +175,7 @@ export default function Guide() {
               আপনার যদি খোঁজ নেওয়ার আরও পদ্ধতি জানা থাকে, তাহলে সেভাবে খোঁজ নিয়ে
               দেখুন।
             </p>
-            <p className="text-xl underline underline-offset-8 decoration-wavy decoration-purple-800 text-gray-800 font-semibold animatedText">
+            <p className="text-xl underline underline-offset-8 decoration-wavy decoration-purple-800 text-gray-800 font-semibold animatedText  galada-regular">
               জাযাকুমুল্লাহু খাইরান।
             </p>
           </div>

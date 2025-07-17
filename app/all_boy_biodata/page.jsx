@@ -38,7 +38,7 @@ const DataComponent = () => {
       {data ? (
         <div>
           <div className="w-full text-center">
-            <h1 className="px-2 py-4 text-2xl sm:text-5xl text-purple-800 underline underline-offset-8 decoration-double decoration-purple-800 font-bold mt-6 animatedText">
+            <h1 className="px-2 py-4 text-2xl sm:text-5xl text-purple-800 underline underline-offset-8 decoration-double decoration-purple-800 font-bold mt-6 animatedText galada-regular">
               “সমস্ত পাত্রের বায়োডাটা”
             </h1>
             <p className="text-pink-700 px-4 md:text-xl">

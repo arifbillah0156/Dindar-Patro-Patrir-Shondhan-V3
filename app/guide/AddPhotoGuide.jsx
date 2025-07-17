@@ -1,7 +1,7 @@
 const AddPhotoGuide = () => {
   return (
     <section className="bg-white shadow-md rounded-lg p-6">
-      <h2 className="text-xl font-semibold text-gray-800 mb-4 underline decoration-double underline-offset-4">
+      <h2 className="text-xl font-semibold text-gray-800 mb-4 underline decoration-double underline-offset-4  galada-regular">
         ৪. আমার জমা হওয়া বায়োডাটায় কিভাবে আমার ছবি যুক্ত করবো?
       </h2>
       <ul className="list-disc list-inside text-gray-800 space-y-2 text-lg">

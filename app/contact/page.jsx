@@ -58,7 +58,7 @@ const ContactForm = () => {
       className="rounded-3xl h-max w-[100%] pt-20 pb-16 mb-[-41px] bg-cover bg-center transition-all duration-1000"
     >
       <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-md">
-        <h2 className="text-2xl sm:text-4xl font-bold text-center mb-6 underline underline-offset-8 decoration-double decoration-purple-800 text-purple-900 animatedText">
+        <h2 className="text-2xl sm:text-4xl font-bold text-center mb-6 underline underline-offset-8 decoration-double decoration-purple-800 text-purple-900 animatedText mt-4 galada-regular">
           আমাদের সাথে যোগাযোগ
         </h2>{" "}
         <br />
@@ -68,7 +68,7 @@ const ContactForm = () => {
             passHref
             target="_blank"
             rel="noopener noreferrer"
-            className="p-4 text-xl md:text-2xl bg-blue-100 text-blue-700 rounded-md shadow-md text-center underline underline-offset-4 block"
+            className="p-4 text-xl md:text-2xl bg-blue-100 text-blue-700 rounded-md shadow-md text-center underline underline-offset-4 block "
           >
             আমাদের ফেসবুক পেইজে যেতে এখানে ক্লিক করুন
           </Link>{" "}

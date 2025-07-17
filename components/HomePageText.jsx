@@ -1,7 +1,7 @@
 import React from "react";
 export default function HomePageText() {
   return (
-    <div className="w-full">
+    <div className="w-full galada-regular">
       {/*  */}
       <div
         className="bg-white h-max w-[100%]  bg-cover bg-center pt-12 pb-10 rounded-3xl"
@@ -11,7 +11,7 @@ export default function HomePageText() {
       >
         <div className="flex items-center justify-center">
           <div className="text-center text-white underline underline-offset-8">
-            <h1 className="text-3xl md:text-6xl animate-bounce">
+            <h1 className="text-3xl md:text-6xl animate-bounce ">
               দ্বীনদার পাত্র/পাত্রীর সন্ধান
             </h1>
           </div>
@@ -26,7 +26,7 @@ export default function HomePageText() {
           backgroundImage: `url(/Images/HomeTextBG.jpg)`,
         }}
       >
-        <p className="text-xl sm:text-4xl p-4  font-bold  text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center animate-pulse md:animate-none">
+        <p className="text-xl sm:text-4xl p-4   text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center animate-pulse md:animate-none">
           {" "}
           “আপনি অবিবাহিত হলে বিবাহ করে অর্ধেক দ্বীন পূরন করুন, বাকি অর্ধেকের
           জন্য আল্লাহকে ভয় করুন।”

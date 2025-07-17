@@ -4,7 +4,7 @@ export default function SubmitWelcome({ name }) {
   return (
     <>
       <div className="text-center">
-        <h3 className="text-4xl font-semibold text-green-600 underline underline-offset-8 decoration-wavy mb-6">
+        <h3 className="text-4xl font-semibold text-green-600 underline underline-offset-8 decoration-wavy mb-6  galada-regular">
           ধন্যবাদ
         </h3>{" "}
         <h3 className="text-3xl font-semibold text-pink-600  mb-3 animatedText">

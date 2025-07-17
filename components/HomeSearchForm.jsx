@@ -36,7 +36,7 @@ export default function HomeSearchForm() {
         }}
       >
         <div className="text-center text-4xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-0 py-3 font-bold">
-          <h1 className="underline decoration-purple-800 underline-offset-[12px] decoration-double mb-3 animatedText">
+          <h1 className="underline decoration-purple-800 underline-offset-[12px] decoration-double mb-3 animatedText galada-regular">
             “বায়োডাটা খুজুন”
           </h1>
         </div>
