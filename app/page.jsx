@@ -7,7 +7,7 @@ import HomeSearchForm from "@/components/HomeSearchForm";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <section
         className="h-max w-[100%] bg-cover bg-center pb-24 mb-[-41px] rounded-3xl"
         style={{
@@ -27,6 +27,6 @@ export default function Home() {
       <AdvisePage />
 
       <FunnyMarriage />
-    </>
+    </div>
   );
 }
