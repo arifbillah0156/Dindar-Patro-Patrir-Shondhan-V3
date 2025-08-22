@@ -4,6 +4,7 @@ import HadithPage from "@/components/HomeHadith";
 import FunnyMarriage from "@/components/HomeMarriageTips";
 import HomePageText from "@/components/HomePageText";
 import HomeSearchForm from "@/components/HomeSearchForm";
+import MessengerButton from "@/components/MessengerButton";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           backgroundImage: `url(/Images/BG5.jpg)`,
         }}
       >
+        <MessengerButton />
         <HomePageText />
 
         <HomeAddBiodata />
