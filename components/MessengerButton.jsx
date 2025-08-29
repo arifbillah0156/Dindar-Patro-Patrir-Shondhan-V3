@@ -17,8 +17,8 @@ const MessengerButton = () => {
       <style jsx>{`
         .messenger-wrapper {
           position: fixed;
-          bottom: 30px;
-          right: 30px;
+          bottom: 5px;
+          right: 5px;
           display: flex;
           align-items: center;
           z-index: 9999;
