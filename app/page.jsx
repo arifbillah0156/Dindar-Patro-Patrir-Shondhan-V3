@@ -5,6 +5,7 @@ import FunnyMarriage from "@/components/HomeMarriageTips";
 import HomePageText from "@/components/HomePageText";
 import HomeSearchForm from "@/components/HomeSearchForm";
 import MessengerButton from "@/components/MessengerButton";
+import PrayerTimesCalendar from "@/components/SalatTimes";
 
 export default function Home() {
   return (
@@ -22,6 +23,10 @@ export default function Home() {
 
         <HomeSearchForm />
       </section>
+      {/*  */}
+
+      <PrayerTimesCalendar />
+
       {/*  */}
 
       <HadithPage />
