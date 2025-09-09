@@ -570,7 +570,7 @@ export default function PrayerTimesCalendar() {
   }, [selectedDate]);
   if (error) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="text-center p-8 bg-white rounded-2xl shadow-xl max-w-md">
           <div className="text-5xl text-red-500 mb-4">
             <FaStarAndCrescent />
