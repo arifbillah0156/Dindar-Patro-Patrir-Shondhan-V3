@@ -597,7 +597,7 @@ export default function PrayerTimesCalendar() {
     );
   }
   return (
-    <section className="min-h-screen py-8 px-4 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 mt-12 mx-1 lg:mx-2 mb-2 rounded-lg border">
+    <section className="py-8 px-4 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 mt-12 mx-1 lg:mx-2 mb-2 rounded-lg border">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
