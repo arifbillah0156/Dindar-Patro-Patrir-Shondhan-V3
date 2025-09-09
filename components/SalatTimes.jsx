@@ -25,6 +25,15 @@ import {
 } from "date-fns";
 import { bn } from "date-fns/locale";
 
+// Function to convert 24-hour time to 12-hour format
+function formatTimeTo12Hour(time24) {
+  const [hours, minutes] = time24.split(":");
+  const hoursNum = parseInt(hours, 10);
+  const period = hoursNum >= 12 ? "PM" : "AM";
+  const hours12 = hoursNum % 12 || 12; // 0 should be converted to 12
+  return `${hours12}:${minutes} ${period}`;
+}
+
 // Custom Loading Component
 function LoadingSpinner() {
   return (
@@ -35,7 +44,6 @@ function LoadingSpinner() {
     </div>
   );
 }
-
 function getHijriMonthName(monthNumber) {
   const hijriMonths = [
     "মুহররম",
@@ -51,20 +59,16 @@ function getHijriMonthName(monthNumber) {
     "জিলকদ",
     "জিলহজ",
   ];
-
   // যদি মাস নম্বর স্ট্রিং আকারে থাকে, তাহলে সংখ্যায় রূপান্তর করুন
   const monthNum =
     typeof monthNumber === "string" ? parseInt(monthNumber) : monthNumber;
-
   // মাস নম্বর চেক করে সঠিক নাম রিটার্ন করুন
   if (monthNum >= 1 && monthNum <= 12) {
     return hijriMonths[monthNum - 1];
   }
-
   // যদি মাস নম্বর সঠিক না হয়, তাহলে খালি স্ট্রিং রিটার্ন করুন
   return "";
 }
-
 // Month and Year Selector Component
 function MonthYearSelector({
   currentMonth,
@@ -87,18 +91,15 @@ function MonthYearSelector({
   ];
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: 21 }, (_, i) => currentYear - 10 + i); // 10 years back and 10 years forward
-
   const handleMonthChange = (e) => {
     const monthIndex = months.indexOf(e.target.value);
     setCurrentMonth(new Date(currentMonth.getFullYear(), monthIndex, 1));
   };
-
   const handleYearChange = (e) => {
     setCurrentMonth(
       new Date(parseInt(e.target.value), currentMonth.getMonth(), 1)
     );
   };
-
   return (
     <div className={`flex gap-2 ${isMobile ? "flex-col" : ""}`}>
       <select
@@ -130,7 +131,6 @@ function MonthYearSelector({
     </div>
   );
 }
-
 // Desktop View Component
 function DesktopView({
   currentMonth,
@@ -183,19 +183,15 @@ function DesktopView({
       description: "রাতের নামাজ",
     },
   ];
-
   const goToPreviousMonth = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
   };
-
   const goToNextMonth = () => {
     setCurrentMonth(addMonths(currentMonth, 1));
   };
-
   const goToCurrentMonth = () => {
     setCurrentMonth(new Date());
   };
-
   // Generate calendar days
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(currentMonth);
@@ -207,7 +203,6 @@ function DesktopView({
     days.push(new Date(currentDate));
     currentDate = addDays(currentDate, 1);
   }
-
   return (
     <div className="hidden md:flex flex-col justify-center lg:flex-row gap-8">
       {/* Calendar Section */}
@@ -272,7 +267,7 @@ function DesktopView({
         </div>
       </div>
       {/* Prayer Times Section */}
-      <div className="max-w-xl lg:w-3/5 bg-white rounded-2xl shadow-xl p-6">
+      <div className="lg:w-3/5 bg-white rounded-2xl shadow-xl p-6">
         <div className="flex justify-between items-center mb-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-800">
@@ -321,8 +316,8 @@ function DesktopView({
                   </div>
                   <div className="text-center">
                     <div className="text-xl font-bold text-gray-800">
-                      {prayerTimes[prayer.key].substring(0, 5)} -{" "}
-                      {prayerTimes[prayer.endTimeKey].substring(0, 5)}
+                      {formatTimeTo12Hour(prayerTimes[prayer.key])} -{" "}
+                      {formatTimeTo12Hour(prayerTimes[prayer.endTimeKey])}
                     </div>
                     <div className="text-xs text-gray-500">শুরু - শেষ</div>
                   </div>
@@ -339,7 +334,6 @@ function DesktopView({
     </div>
   );
 }
-
 // Mobile View Component
 function MobileView({
   currentMonth,
@@ -392,19 +386,15 @@ function MobileView({
       description: "রাতের নামাজ",
     },
   ];
-
   const goToPreviousMonth = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
   };
-
   const goToNextMonth = () => {
     setCurrentMonth(addMonths(currentMonth, 1));
   };
-
   const goToCurrentMonth = () => {
     setCurrentMonth(new Date());
   };
-
   // Generate calendar days
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(currentMonth);
@@ -416,7 +406,6 @@ function MobileView({
     days.push(new Date(currentDate));
     currentDate = addDays(currentDate, 1);
   }
-
   return (
     <div className="md:hidden flex flex-col gap-6">
       {/* Calendar Section */}
@@ -528,9 +517,9 @@ function MobileView({
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-gray-800">
-                      {prayerTimes[prayer.key].substring(0, 5)} -{" "}
-                      {prayerTimes[prayer.endTimeKey].substring(0, 5)}
+                    <div className="text-[14px] font-bold text-gray-800">
+                      {formatTimeTo12Hour(prayerTimes[prayer.key])} -{" "}
+                      {formatTimeTo12Hour(prayerTimes[prayer.endTimeKey])}
                     </div>
                     <div className="text-xs text-gray-500">শুরু - শেষ</div>
                   </div>
@@ -547,7 +536,6 @@ function MobileView({
     </div>
   );
 }
-
 export default function PrayerTimesCalendar() {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -555,7 +543,6 @@ export default function PrayerTimesCalendar() {
   const [hijriDate, setHijriDate] = useState(null);
   const [isLoadingPrayerTimes, setIsLoadingPrayerTimes] = useState(true);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     async function fetchPrayerTimes() {
       setIsLoadingPrayerTimes(true);
@@ -581,7 +568,6 @@ export default function PrayerTimesCalendar() {
     }
     fetchPrayerTimes();
   }, [selectedDate]);
-
   if (error) {
     return (
       <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -610,7 +596,6 @@ export default function PrayerTimesCalendar() {
       </div>
     );
   }
-
   return (
     <section className="min-h-screen py-8 px-4 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 mt-12 mx-1 lg:mx-2 mb-2 rounded-lg border">
       <div className="max-w-7xl mx-auto">
