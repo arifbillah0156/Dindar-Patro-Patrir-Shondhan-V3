@@ -1,16 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MsgIcon from "@/public/Images/facebook-messenger-icon.png";
 import Image from "next/image";
 
 const MessengerButton = () => {
   const [clickRipple, setClickRipple] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // কম্পোনেন্ট মাউন্ট হওয়ার পরে এটি দেখানো হবে
+    setIsMounted(true);
+  }, []);
 
   const handleClick = () => {
     setClickRipple(true);
     setTimeout(() => setClickRipple(false), 600);
     window.open("https://www.m.me/DeendarPatraPatrisandhan", "_blank");
   };
+
+  // কম্পোনেন্ট মাউন্ট না হওয়া পর্যন্ত কিছুই রেন্ডার করবে না
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <>
@@ -22,8 +33,11 @@ const MessengerButton = () => {
           display: flex;
           align-items: center;
           z-index: 9999;
+          /* নিশ্চিত করুন যে এটি সবসময় সঠিক অবস্থানে থাকবে */
+          transform: none !important;
+          top: auto !important;
+          left: auto !important;
         }
-
         .messenger-label {
           margin-right: 10px;
           background: #ffffff;
@@ -47,7 +61,6 @@ const MessengerButton = () => {
           content: "";
           position: absolute;
         }
-
         .messenger-button {
           width: 65px;
           height: 65px;
@@ -64,7 +77,6 @@ const MessengerButton = () => {
           animation: pulse-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
           position: relative;
         }
-
         @keyframes pulse-animation {
           0% {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1),
@@ -79,7 +91,6 @@ const MessengerButton = () => {
               0 0 0 0 rgba(128, 0, 128, 0);
           }
         }
-
         .messenger-icon-wrapper {
           position: relative;
           width: 35px;
@@ -92,7 +103,6 @@ const MessengerButton = () => {
         .messenger-button:hover .messenger-icon-wrapper {
           transform: scale(1.1);
         }
-
         .notification-dot {
           position: absolute;
           top: -5px;
@@ -110,7 +120,6 @@ const MessengerButton = () => {
           font-weight: bold;
         }
       `}</style>
-
       <div className="messenger-wrapper">
         <div className="messenger-label">Messenger-এ চ্যাট করুন</div>
         <div

@@ -44,6 +44,7 @@ function LoadingSpinner() {
     </div>
   );
 }
+
 function getHijriMonthName(monthNumber) {
   const hijriMonths = [
     "মুহররম",
@@ -69,6 +70,7 @@ function getHijriMonthName(monthNumber) {
   // যদি মাস নম্বর সঠিক না হয়, তাহলে খালি স্ট্রিং রিটার্ন করুন
   return "";
 }
+
 // Month and Year Selector Component
 function MonthYearSelector({
   currentMonth,
@@ -91,15 +93,18 @@ function MonthYearSelector({
   ];
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: 21 }, (_, i) => currentYear - 10 + i); // 10 years back and 10 years forward
+
   const handleMonthChange = (e) => {
     const monthIndex = months.indexOf(e.target.value);
     setCurrentMonth(new Date(currentMonth.getFullYear(), monthIndex, 1));
   };
+
   const handleYearChange = (e) => {
     setCurrentMonth(
       new Date(parseInt(e.target.value), currentMonth.getMonth(), 1)
     );
   };
+
   return (
     <div className={`flex gap-2 ${isMobile ? "flex-col" : ""}`}>
       <select
@@ -131,6 +136,7 @@ function MonthYearSelector({
     </div>
   );
 }
+
 // Desktop View Component
 function DesktopView({
   currentMonth,
@@ -164,7 +170,7 @@ function DesktopView({
       icon: <FaCloudSun className="text-amber-500" />,
       color: "from-amber-400 to-yellow-600",
       endTimeKey: "Maghrib",
-      description: "বিকেলের নামাজ",
+      description: "বিকেলের নামাজ (হানাফি)",
     },
     {
       key: "Maghrib",
@@ -183,15 +189,19 @@ function DesktopView({
       description: "রাতের নামাজ",
     },
   ];
+
   const goToPreviousMonth = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
   };
+
   const goToNextMonth = () => {
     setCurrentMonth(addMonths(currentMonth, 1));
   };
+
   const goToCurrentMonth = () => {
     setCurrentMonth(new Date());
   };
+
   // Generate calendar days
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(currentMonth);
@@ -203,10 +213,11 @@ function DesktopView({
     days.push(new Date(currentDate));
     currentDate = addDays(currentDate, 1);
   }
+
   return (
     <div className="hidden md:flex flex-col justify-center lg:flex-row gap-8">
       {/* Calendar Section */}
-      <div className="w-full lg:w-2/5 bg-white rounded-2xl shadow-xl p-6">
+      <div className="w-full lg:w-2/5 lg:max-w-[490px] bg-white rounded-2xl shadow-xl p-6">
         <div className="flex justify-between items-center mb-6">
           <button
             className="p-3 rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 active:bg-blue-300 transition-colors duration-200 shadow-md"
@@ -267,7 +278,7 @@ function DesktopView({
         </div>
       </div>
       {/* Prayer Times Section */}
-      <div className="lg:w-3/5 bg-white rounded-2xl shadow-xl p-6">
+      <div className="lg:w-3/5 lg:max-w-xl bg-white rounded-2xl shadow-xl p-6">
         <div className="flex justify-between items-center mb-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-800">
@@ -334,6 +345,7 @@ function DesktopView({
     </div>
   );
 }
+
 // Mobile View Component
 function MobileView({
   currentMonth,
@@ -386,15 +398,19 @@ function MobileView({
       description: "রাতের নামাজ",
     },
   ];
+
   const goToPreviousMonth = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
   };
+
   const goToNextMonth = () => {
     setCurrentMonth(addMonths(currentMonth, 1));
   };
+
   const goToCurrentMonth = () => {
     setCurrentMonth(new Date());
   };
+
   // Generate calendar days
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(currentMonth);
@@ -406,6 +422,7 @@ function MobileView({
     days.push(new Date(currentDate));
     currentDate = addDays(currentDate, 1);
   }
+
   return (
     <div className="md:hidden flex flex-col gap-6">
       {/* Calendar Section */}
@@ -472,11 +489,11 @@ function MobileView({
       <div className="bg-white rounded-2xl shadow-xl p-4">
         <div className="flex justify-between items-center mb-4">
           <div>
-            <h2 className="text-2xl font-bold text-gray-800">
+            <h2 className="text-xl font-bold text-gray-800">
               {format(selectedDate, "EEEE, d MMMM yyyy", { locale: bn })}
             </h2>
             {hijriDate && (
-              <p className="text-gray-600 flex items-center">
+              <p className="text-gray-600 flex items-center text-sm">
                 <span className="ml-1">
                   {hijriDate.day.toString().padStart(2, "0")}/
                   {getHijriMonthName(hijriDate.month.number || hijriDate.month)}
@@ -536,6 +553,7 @@ function MobileView({
     </div>
   );
 }
+
 export default function PrayerTimesCalendar() {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -543,14 +561,16 @@ export default function PrayerTimesCalendar() {
   const [hijriDate, setHijriDate] = useState(null);
   const [isLoadingPrayerTimes, setIsLoadingPrayerTimes] = useState(true);
   const [error, setError] = useState(null);
+
   useEffect(() => {
     async function fetchPrayerTimes() {
       setIsLoadingPrayerTimes(true);
       setError(null);
       try {
         const dateStr = format(selectedDate, "dd-MM-yyyy");
+        // Updated API call to include Hanafi school parameter
         const res = await fetch(
-          `https://api.aladhan.com/v1/timingsByCity/${dateStr}?city=Dhaka&country=Bangladesh&method=1`
+          `https://api.aladhan.com/v1/timingsByCity/${dateStr}?city=Dhaka&country=Bangladesh&method=1&school=1`
         );
         const data = await res.json();
         if (data.code === 200) {
@@ -568,6 +588,7 @@ export default function PrayerTimesCalendar() {
     }
     fetchPrayerTimes();
   }, [selectedDate]);
+
   if (error) {
     return (
       <div className="flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -596,6 +617,7 @@ export default function PrayerTimesCalendar() {
       </div>
     );
   }
+
   return (
     <section className="py-8 px-4 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 mt-12 mx-1 lg:mx-2 mb-2 rounded-lg border">
       <div className="max-w-7xl mx-auto">
@@ -605,7 +627,7 @@ export default function PrayerTimesCalendar() {
             <FaMosque className="text-white text-3xl" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-800 mb-3 pt-4">
-            নামাজের সময়সূচী
+            নামাজের সময়সূচী (হানাফি)
           </h1>
           <p className="text-lg text-gray-600 mb-6">ঢাকা, বাংলাদেশ</p>
         </div>
