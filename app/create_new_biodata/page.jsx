@@ -63,8 +63,12 @@ export default function Home() {
 
   // Clear All
   const clearAll = () => {
-    localStorage.removeItem('biodataDraft');
-    location.reload()
+    const userConfirmed = confirm("সব তথ্য মুছে ফেলতে চান?");
+    if (userConfirmed) {
+      localStorage.removeItem('biodataDraft');
+      location.reload()
+    }
+
   }
 
   const [formData, setFormData] = useState(() => {
@@ -1278,7 +1282,7 @@ export default function Home() {
               </p>
 
               {/*  */}
-              <div className="w-full flex justify-end">
+              <div className="w-full flex justify-end mb-4">
                 <button type="button" onClick={clearAll} className="text-center text-red-600 px-4 py-2 bg-red-100 rounded-md text-lg underline underline-offset-[6px] mb-2 italic">সব তথ্য মুছুন</button>
               </div>
 
