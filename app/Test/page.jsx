@@ -91,7 +91,7 @@ const BiodataApp = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 flex flex-col items-center justify-center p-4">
+      <div className="min-h-[90vh] flex flex-col items-center justify-center p-4">
         <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-4xl w-full">
           <div className="flex justify-center mb-6">
             <div className="relative">
@@ -101,21 +101,7 @@ const BiodataApp = () => {
               </div>
             </div>
           </div>
-          <h2 className="text-3xl font-bold text-center text-pink-800 mb-6">বিয়ে সম্পর্কিত গুরুত্বপূর্ণ হাদিস</h2>
-          <div className="space-y-4 max-h-96 overflow-y-auto p-4 bg-pink-50 rounded-xl">
-            <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-pink-400">
-              <p className="font-bold text-pink-700 mb-2">বিয়ে সুন্নত</p>
-              <p className="text-gray-700">রাসূল (সা.) বলেন: "বিয়ে আমার সুন্নত। আর যে আমার সুন্নত থেকে বিমুখ হলো, সে আমার উম্মত নয়।" (বুখারি: 5063, মুসলিম: 1401)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-pink-400">
-              <p className="font-bold text-pink-700 mb-2">বিয়ে যৌবন রক্ষার মাধ্যম</p>
-              <p className="text-gray-700">রাসূল (সা.) বলেন: "হে যুব সমাজ! তোমাদের মধ্যে যারা বিয়ের সামর্থ্য রাখে, তারা যেন বিয়ে করে। কারণ এটি দৃষ্টি অবনমিত রাখে এবং যৌন অঙ্গকে সংযত রাখে।" (বুখারি: 5066, মুসলিম: 1400)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-pink-400">
-              <p className="font-bold text-pink-700 mb-2">ধর্ম দেখে বিয়ে করা</p>
-              <p className="text-gray-700">রাসূল (সা.) বলেন: "নারীকে বিয়ে করা হয় চারটি কারণে—তাঁর ধন-সম্পদ, বংশ-মর্যাদা, সৌন্দর্য ও ধর্মীয়তা। তবে তুমি ধর্মবতী নারীকে বেছে নাও, তাহলে তুমি কল্যাণ লাভ করবে।" (বুখারি: 5090, মুসলিম: 1466)</p>
-            </div>
-          </div>
+
         </div>
       </div>
     );
@@ -304,29 +290,29 @@ const BiodataCard = ({ dataName, dataObj, onViewDetails }) => {
 
       {/* Body */}
       <div className="p-4 space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center">
           <span className="text-gray-600 font-medium">নাম:</span>
-          <span className="text-gray-900 font-semibold text-right">{name}</span>
+          <span className="text-gray-900 font-semibold ml-[20px]">{name}</span>
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center">
           <span className="text-gray-600 font-medium">বয়স:</span>
-          <span className="text-gray-900 text-right">{age} বছর</span>
+          <span className="text-gray-900 ml-[16px]">{age} বছর</span>
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center">
           <span className="text-gray-600 font-medium">অবস্থা:</span>
-          <span className="text-gray-900 text-right">{marriedStatus}</span>
+          <span className="text-gray-900 ml-[10px]">{marriedStatus}</span>
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center">
           <span className="text-gray-600 font-medium">বিভাগ:</span>
-          <span className="text-gray-900 text-right">{division}</span>
+          <span className="text-gray-900 ml-[10px]">{division}</span>
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center">
           <span className="text-gray-600 font-medium">পেশা:</span>
-          <span className="text-gray-900 text-right">{selectOccupation}</span>
+          <span className="text-gray-900 ml-[16px]">{selectOccupation}</span>
         </div>
       </div>
 
@@ -711,7 +697,7 @@ const InfoCard = ({ label, value, full = false }) => {
   return (
     <div className={`${full ? 'md:col-span-2' : ''} bg-gradient-to-r from-pink-50 to-rose-50 p-4 rounded-xl border border-pink-200 hover:shadow-md transition-shadow duration-200`}>
       <p className="text-sm font-semibold text-pink-700 mb-1">{label}</p>
-      <p className="text-gray-800">{value || 'তথ্য প্রদান করা হয়েনি'}</p>
+      <p className="text-gray-800">{value || 'তথ্য প্রদান করা হয়নি'}</p>
     </div>
   );
 };
