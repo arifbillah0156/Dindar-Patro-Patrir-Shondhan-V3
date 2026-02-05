@@ -142,7 +142,7 @@ const BiodataApp = () => {
             <button
               onClick={() => setActiveFilter("সব")}
               className={`px-6 py-3 font-semibold rounded-lg mx-2 my-1 transition-all duration-300 ${activeFilter === "সব"
-                ? "bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg transform scale-105"
+                ? "bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-lg transform scale-105"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
             >
@@ -151,7 +151,7 @@ const BiodataApp = () => {
             <button
               onClick={() => setActiveFilter("পাত্র")}
               className={`px-6 py-3 font-semibold rounded-lg mx-2 my-1 transition-all duration-300 ${activeFilter === "পাত্র"
-                ? "bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg transform scale-105"
+                ? "bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-lg transform scale-105"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
             >
@@ -160,7 +160,7 @@ const BiodataApp = () => {
             <button
               onClick={() => setActiveFilter("পাত্রী")}
               className={`px-6 py-3 font-semibold rounded-lg mx-2 my-1 transition-all duration-300 ${activeFilter === "পাত্রী"
-                ? "bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg transform scale-105"
+                ? "bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-lg transform scale-105"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
             >
@@ -240,7 +240,7 @@ const BiodataApp = () => {
                 setSearchQuery("");
                 setActiveFilter("সব");
               }}
-              className="mt-6 px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="mt-6 px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               ফিল্টার মুছুন
             </button>
@@ -275,7 +275,7 @@ const BiodataCard = ({ dataName, dataObj, onViewDetails }) => {
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-pink-100 hover:shadow-2xl transition-all duration-300 group">
       {/* Header */}
-      <div className="bg-gradient-to-r from-pink-500 to-rose-500 p-4 text-white relative overflow-hidden">
+      <div className="bg-gradient-to-r from-pink-600 to-rose-600 p-4 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-10 rounded-full -ml-12 -mb-12"></div>
         <div className="relative z-10 flex justify-center mb-3">
@@ -334,7 +334,7 @@ const BiodataCard = ({ dataName, dataObj, onViewDetails }) => {
       <div className="px-4 pb-4">
         <button
           onClick={onViewDetails}
-          className="w-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold py-3 px-4 rounded-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform hover:scale-105 shadow-lg group-hover:shadow-xl"
+          className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold py-3 px-4 rounded-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform hover:scale-105 shadow-lg group-hover:shadow-xl"
         >
           বিস্তারিত দেখুন
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -417,7 +417,7 @@ const BiodataModal = ({ biodata, onClose }) => {
         onClick={(e) => e.stopPropagation()} // Prevent clicks inside the modal from closing it
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-pink-500 to-rose-500 text-white p-6 relative">
+        <div className="bg-gradient-to-r from-pink-600 to-rose-600 text-white p-6 relative">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="bg-white rounded-full p-2 mr-4 shadow-lg">
@@ -695,7 +695,7 @@ const BiodataModal = ({ biodata, onClose }) => {
           {/* <div className="flex justify-end">
             <button
               onClick={onClose}
-              className="bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold py-3 px-8 rounded-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold py-3 px-8 rounded-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               বন্ধ করুন
             </button>
