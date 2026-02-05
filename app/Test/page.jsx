@@ -462,13 +462,20 @@ const BiodataModal = ({ biodata, onClose }) => {
                 {new9.map((imgUrl) => (
                   <div key={imgUrl} className="relative group">
                     <div className="aspect-square overflow-hidden rounded-xl shadow-lg">
-                      <Image
+                      <img
                         src={`/BiodataImages/${formID}/${imgUrl}`}
                         alt="Biodata Image"
                         width={300}
                         height={300}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
+                      {/* <Image
+                        src={`/BiodataImages/${formID}/${imgUrl}`}
+                        alt="Biodata Image"
+                        width={300}
+                        height={300}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      /> */}
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-all duration-300 rounded-xl flex items-end justify-center pb-4">
                       <Link
