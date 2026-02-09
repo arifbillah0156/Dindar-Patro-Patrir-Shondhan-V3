@@ -69,15 +69,34 @@ const BiodataApp = () => {
     setFilteredData(result);
   }, [data, activeFilter, searchQuery]);
 
+  // const openModal = (biodata) => {
+  //   setSelectedBiodata(biodata);
+  //   setIsModalOpen(true);
+  //   document.body.style.overflow = 'hidden';
+  // };
+
   const openModal = (biodata) => {
     setSelectedBiodata(biodata);
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
+
+    // Push fake history state for modal
+    window.history.pushState({ modalOpen: true }, "");
   };
+
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  //   document.body.style.overflow = 'unset';
+  // };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
+
+    // If modal state exists, go back one step silently
+    if (window.history.state?.modalOpen) {
+      window.history.back();
+    }
   };
 
   useEffect(() => {
@@ -89,9 +108,21 @@ const BiodataApp = () => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
+  useEffect(() => {
+    const handlePopState = (e) => {
+      if (isModalOpen) {
+        setIsModalOpen(false);
+        document.body.style.overflow = "unset";
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [isModalOpen]);
+
   if (loading) {
     return (
-      <div className="min-h-[90vh] flex flex-col items-center justify-center p-4">
+      <div className="min-h-[80vh] flex flex-col items-center justify-center p-4">
         <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-4xl w-full">
           <div className="flex justify-center mb-6">
             <div className="relative">
