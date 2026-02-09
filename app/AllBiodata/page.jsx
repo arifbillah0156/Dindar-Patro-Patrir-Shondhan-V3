@@ -722,7 +722,8 @@ const BiodataModal = ({ biodata, onClose }) => {
         </div>
     );
 };
-
+// 
+// 
 // InfoCard Component for modal
 const InfoCard = ({ label, value, full = false }) => {
     return (
