@@ -69,6 +69,13 @@ const BiodataApp = () => {
         setFilteredData(result);
     }, [data, activeFilter, searchQuery]);
 
+    // Scroll to top when data loads
+    useEffect(() => {
+        if (data && data.length > 0) {
+            window.scrollTo({ top: 0, behavior: "instant" });
+        }
+    }, [data]);
+
     // const openModal = (biodata) => {
     //   setSelectedBiodata(biodata);
     //   setIsModalOpen(true);
